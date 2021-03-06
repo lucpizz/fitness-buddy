@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 app.use(require("./routes/html_routes"));
+app.use(require("./api_routes/"));
 
 mongoose.connect("mongodb://localhost/workout",
   process.env.MONGODB_URI || ""
